@@ -1,7 +1,8 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
+$(call inherit-product-if-exists, vendor/lineage/config/tenx.mk)
 
-PRODUCT_BRAND ?= LineageOS
+PRODUCT_BRAND ?= TenXOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -106,10 +107,10 @@ $(call enforce-product-packages-exist-internal,$(wildcard device/*/$(LINEAGE_BUI
 endif
 
 # Bootanimation
-TARGET_SCREEN_WIDTH ?= 1080
-TARGET_SCREEN_HEIGHT ?= 1920
-PRODUCT_PACKAGES += \
-    bootanimation.zip
+$(call inherit-product, vendor/lineage/config/bootanimation.mk)
+
+# Branding
+$(call inherit-product, vendor/lineage/config/branding.mk)
 
 # Build Manifest
 PRODUCT_PACKAGES += \
