@@ -4,22 +4,20 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
 
-# LineageOS System Version
+# TenX-OS System Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.version=$(LINEAGE_VERSION) \
-    ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
-    ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(LINEAGE_VERSION) \
-    ro.lineagelegal.url=https://lineageos.org/legal
+    ro.tenx.build.date=$(TENX_BUILD_DATE) \
+    ro.tenx.build.version=$(LINEAGE_VERSION) \
+    ro.tenx.build.variant=$(TENX_BUILD_VARIANT) \
+    ro.tenx.display.version=$(LINEAGE_DISPLAY_VERSION) \
+    ro.tenx.releasetype=$(TENX_BUILD_TYPE) \
+    ro.tenx.version=$(TENX_VERSION) \
+    ro.tenxlegal.url=https://tenx-os.com/privacy
 
-# LineageOS Platform Display Version
-ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION)
-
-# LineageOS Platform SDK Version
+# TenX-OS Platform SDK Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.lineage.build.version.plat.sdk=$(LINEAGE_PLATFORM_SDK_VERSION)
 
-# LineageOS Platform Internal Version
+# TenX-OS Platform Internal Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
