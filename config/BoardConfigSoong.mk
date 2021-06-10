@@ -44,6 +44,7 @@ SOONG_CONFIG_lineageGlobalVars += \
     target_health_charging_control_supports_bypass \
     target_health_charging_control_supports_deadline \
     target_health_charging_control_supports_toggle \
+    needs_camera_boottime \
     target_init_vendor_lib \
     target_power_libperfmgr_mode_extension_lib \
     target_powershare_path \
@@ -92,6 +93,7 @@ SOONG_CONFIG_lineageQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_P
 SOONG_CONFIG_lineageGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_lineageGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_lineageGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
+SOONG_CONFIG_lineageGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
