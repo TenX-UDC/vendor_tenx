@@ -38,3 +38,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Enable dex2oat64 to do dexopt
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
+
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
