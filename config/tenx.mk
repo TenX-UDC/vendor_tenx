@@ -42,7 +42,8 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     OmniJaws \
-    OmniStyle
+    OmniStyle \
+    CustomDoze
 
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
