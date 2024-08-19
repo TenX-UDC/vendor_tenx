@@ -5,6 +5,8 @@ $(call inherit-product-if-exists, vendor/lineage/config/tenx.mk)
 $(call inherit-product, vendor/gms/products/gms.mk)
 # Elegance
 $(call inherit-product-if-exists, vendor/overlays/Elegance/elegance.mk)
+# Themedicons
+$(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
 
 PRODUCT_BRAND ?= TenXOS
 
