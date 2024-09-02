@@ -257,6 +257,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     Launcher3QuickStep \
     NexusLauncherRelease \
+    Lawnchair \
     Settings \
     GameSpace
 
