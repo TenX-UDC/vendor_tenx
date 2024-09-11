@@ -2,7 +2,7 @@ PRODUCT_VERSION_MAJOR = 14
 PRODUCT_VERSION_MINOR = 0
 
 # Increase TenX Version with each major release.
-TENX_VERSION := 1.0
+TENX_VERSION := 1.1
 
 # Internal version
 LINEAGE_VERSION := TenX-OS-v$(TENX_VERSION)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)
