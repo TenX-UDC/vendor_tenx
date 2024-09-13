@@ -41,11 +41,16 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    AndroidPackageInstaller \
     OmniJaws \
     OmniStyle \
     CustomDoze \
     GameSpace
+
+# Custom package installer
+ifeq ($(TARGET_USE_CUSTOM_PACKAGE_INSTALLER), true)
+PRODUCT_PACKAGES += \
+    AndroidPackageInstaller
+endif
 
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
