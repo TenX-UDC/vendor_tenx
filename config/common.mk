@@ -11,6 +11,8 @@ $(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
 $(call inherit-product, vendor/extra/product.mk)
 # Pixel Framework
 $(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
+# Pixel style
+$(call inherit-product-if-exists, vendor/pixel-style/config/common.mk)
 
 PRODUCT_BRAND ?= TenXOS
 
