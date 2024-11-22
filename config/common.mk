@@ -246,10 +246,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     rsync
 
-# BtHelper
-PRODUCT_PACKAGES += \
-    BtHelper
-
 # Flags
 PRODUCT_PACKAGES += \
     SystemUIFlagFlipper
