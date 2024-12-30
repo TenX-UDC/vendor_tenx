@@ -1,8 +1,6 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/tenx.mk)
-# Google Apps
-$(call inherit-product, vendor/gms/products/gms.mk)
 # Elegance
 $(call inherit-product-if-exists, vendor/overlays/Elegance/elegance.mk)
 # Themedicons
@@ -22,6 +20,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+endif
+
+# GMS
+ifeq ($(WITH_MINI_GMS),true)
+$(call inherit-product, vendor/gms/products/gms_mini.mk)
+else
+$(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
